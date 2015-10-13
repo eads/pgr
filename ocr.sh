@@ -1,13 +1,10 @@
 #!/bin/bash
 
-for f in tiff/*
-  do
-    output_file="text/`basename $f`.txt"
-    output_path="text/`basename $f`"
-    if [ ! -e "$output_file" ]; then
-        echo "Processing $f"
-        tesseract -l spa $f $output_path
-    else
-        echo "Skipping $f"
-    fi
-  done
+output_file="pages/`basename $1`.txt"
+output_path="pages/`basename $1`"
+if [ ! -e "$output_file" ]; then
+    echo "Processing $1"
+    tesseract -l spa $1 $output_path
+else
+    echo "Skipping $1"
+fi
