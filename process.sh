@@ -13,6 +13,6 @@ echo "split files into pages"
 ./split.sh
 
 echo "ocr the pages"
-./ocr.sh
+./ocr-parallel.sh
 
 cat pages/*.txt > text/tomo-001-all.txt
