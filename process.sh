@@ -9,7 +9,7 @@ echo "downloading files"
 ./download.sh
 
 echo "split files into pages"
-./split.shh
+./split.sh
 
 echo "ocr the pages"
 ./ocr.sh

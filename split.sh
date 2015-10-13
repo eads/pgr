@@ -1,3 +1,3 @@
 #!/bin/bash
 
-gs -o tiff/tomo1-page-%04d.tif -sDEVICE=tiffg4 pdf/Tomo\ 1.pdf
+gs -o tiff/tomo-001-page-%04d.tif -sDEVICE=tiffg4 pdf/tomo-001.pdf
