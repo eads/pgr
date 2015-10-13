@@ -2,9 +2,12 @@
 
 for f in tiff/*
   do
-    echo "Processing $f"
-    output_file=text/`basename $f`
+    output_file="text/`basename $f`.txt"
+    output_path="text/`basename $f`"
     if [ ! -e "$output_file" ]; then
-        tesseract -l spa $f $output_file
+        echo "Processing $f"
+        tesseract -l spa $f $output_path
+    else
+        echo "Skipping $f"
     fi
   done
